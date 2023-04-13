@@ -1,0 +1,5 @@
+print("Введите 1-е число: ")
+a=int(input())
+print("Введите 2-е число: ")
+b=int(input())
+print(a,"+",b,"=",a+b)
