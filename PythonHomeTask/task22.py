@@ -1,17 +1,13 @@
 # Задача 22: Даны два неупорядоченных набора целых чисел (может быть, с повторениями).
 # Выдать без повторений в порядке возрастания все те числа, которые встречаются в обоих наборах.
 print("Программа выводит в порядке возрастания числа, которые встречаются в двух заданных пользователем наборах.")
-n=int(input("Укажите размер первого набора: "))
-m=int(input("Укажите размер второго набора: "))
-N=[]
-M=[]
-for i in range(n): 
-    N.append(int(input(f"Введите {i+1}-й элемент первого набора: ")))
-for i in range(m):
-    M.append(int(input(f"Введите {i+1}-й элемент второго набора: ")))
-uN=set(N)
-uM=set(M)
-uIntersection=uN.intersection(uM)
+N=[int(x) for x in input("Введите первую последовательность цифр без пробелов: ")]
+setN=set(N)
+M=[int(x) for x in input("Введите вторую последовательность цифр без пробелов: ")]
+setM=set(M)
+setTogether=setN & setM
+listTogether=list(setTogether)
+listTogether.sort()
 print(f"Первый набор: {N}")
 print(f"Второй набор: {M}")
-print(f"Результат: {uIntersection}")
+print(f"Результат: {listTogether}")

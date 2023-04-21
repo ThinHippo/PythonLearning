@@ -11,11 +11,11 @@ minVal=10
 maxVal=50
 for i in range(n):
     berry.append(random.randint(minVal,maxVal))
-j=n-1
-fullbasket=0
+j=len(berry)-1
+fullbasket=[]
 while j>=0:
-    if berry[j]+berry[j-1]+berry[j-2]> fullbasket:fullbasket=berry[j]+berry[j-1]+berry[j-2]
+    fullbasket.append(berry[j]+berry[j-1]+berry[j-2])
     j-=1
 print(f"Количество ягод на кустах: {berry}")
-print(f"Максимальный сбор с трёх смежных кустов составит: {fullbasket}")
+print(f"Максимальный сбор с трёх смежных кустов составит: {max(fullbasket)}")
 
